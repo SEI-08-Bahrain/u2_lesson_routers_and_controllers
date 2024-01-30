@@ -1,0 +1,14 @@
+<!-- The below tag is used when you want to include HTML content from 
+a file without escaping special characters. 
+It allows the included HTML to be rendered as intended. -->
+
+<%- include('../partials/header') %>
+        <h1>Express To-Do</h1>
+        <ul>
+            <% todos.forEach( todo => { %>
+                <li>
+                    <a href="/todos/<%= todo.id %>"><%= todo.todo %></a>
+                </li>
+            <% }); %>
+        </ul>
+<%- include('../partials/footer') %>
